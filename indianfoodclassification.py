@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 from ultralytics import YOLO
-from ultralytics.utils import plt
+import matplotlib.pyplot as plt
 
 
 # Streamlit app configuration
