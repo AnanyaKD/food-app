@@ -3,8 +3,6 @@ from PIL import Image
 from ultralytics import YOLO
 from ultralytics.utils import plt
 
-# Load YOLOv8 model (assumes the model is pretrained for Indian food classification)
-model_path = "/Users/anushkadurg/Documents/FINAL!/best.pt"
 
 # Streamlit app configuration
 st.set_page_config(page_title="Food Classification App", page_icon="🍲", layout="centered")
@@ -26,9 +24,6 @@ def load_model():
     model = YOLO("best.pt")
     return model
 
-# Placeholder for storing reviews
-if 'reviews' not in st.session_state:
-    st.session_state.reviews = []
 
 # Create three tabs for different sections
 tab1, tab2, tab3 = st.tabs(["Image Classification", "About", "User Reviews"])
